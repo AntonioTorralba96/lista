@@ -27,6 +27,8 @@ Route::group(['middleware' => 'auth'],function (){
 
     Route::put('productos/edit/{id}', 'ProductoController@putEdit');
 
+    Route::get('productos/buy/{id}', 'ProductoController@changeBuy');
+
 });
 
 Auth::routes();
