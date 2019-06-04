@@ -12,10 +12,10 @@
         <div class="col-sm-8">
 
             <h1 style="min-height:45px;margin:5px 0 10px 0">
-                {{$producto[0]}}
+                {{$producto->nombre}}
             </h1>
             <h4 style="min-height:45px;margin:5px 0 10px 0">
-                {{$producto[1]}}
+                {{$producto->categoria}}
             </h4>
             <p><b>Estado: </b>Producto actualmente comprado</p>
             <button type="button" class="btn btn-danger">Pendiente de Compra</button>
