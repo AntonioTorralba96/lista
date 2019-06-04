@@ -2,10 +2,6 @@
 
 @section('content')
 
-    @extends('layouts.master')
-
-@section('content')
-
     <div class="row" style="margin-top:40px">
         <div class="offset-md-3 col-md-6">
             <div class="card">
@@ -55,7 +51,5 @@
             </div>
         </div>
     </div>
-
-@stop
 
 @stop

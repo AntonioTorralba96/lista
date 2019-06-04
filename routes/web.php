@@ -13,18 +13,22 @@
 
 Route::get('/', 'HomeController@getHome');
 
-Route::get('login', function () {
-    return view('auth/login');
+Route::group(['middleware' => 'auth'],function (){
+
+    Route::get('productos', 'ProductoController@getIndex');
+
+    Route::get('productos/show/{id}', 'ProductoController@getShow');
+
+    Route::get('productos/create', 'ProductoController@getCreate');
+
+    Route::post('productos/create', 'ProductoController@postCreate');
+
+    Route::get('productos/edit/{id}', 'ProductoController@getEdit');
+
+    Route::put('productos/edit/{id}', 'ProductoController@putEdit');
+
 });
 
-Route::get('logout', function () {
-    return ('Logout usuario');
-});
+Auth::routes();
 
-Route::get('productos', 'ProductoController@getIndex');
-
-Route::get('productos/show/{id}', 'ProductoController@getShow');
-
-Route::get('productos/create', 'ProductoController@getCreate');
-
-Route::get('productos/edit/{id}', 'ProductoController@getEdit');
+Route::get('/home', 'HomeController@index')->name('home');

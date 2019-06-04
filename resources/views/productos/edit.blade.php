@@ -36,7 +36,7 @@
 
                         <div class="form-group">
                             <label for="descripcion">Descripción</label>
-                            <textarea name="descripcion" id="descripcion" class="form-control" rows="3"> {{ $producto->descripcion }}" </textarea>
+                            <textarea name="descripcion" id="descripcion" class="form-control" rows="3"> {{ $producto->descripcion }} </textarea>
                         </div>
 
                         <div class="form-group text-center">
